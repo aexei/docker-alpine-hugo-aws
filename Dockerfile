@@ -1,7 +1,7 @@
 FROM alpine:3.2
 MAINTAINER Chris Baker <cgbaker@cgbaker.net>
 
-ENV HUGO_VERSION 0.18.1
+ENV HUGO_VERSION 0.17.0
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
 
 # Install AWS tools as well
@@ -21,6 +21,6 @@ ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINA
 RUN tar xzf /usr/local/hugo/${HUGO_BINARY}.tar.gz -C /usr/local/hugo \
 	&& ln -s /usr/local/hugo/hugo_${HUGO_VERSION}_linux_amd64/hugo_${HUGO_VERSION}_linux_amd64 /usr/local/bin/hugo \
 	&& rm /usr/local/hugo/${HUGO_BINARY}.tar.gz
- 
+
 EXPOSE 1313
 CMD hugo version
