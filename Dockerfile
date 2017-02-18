@@ -1,7 +1,7 @@
 FROM alpine:3.2
 MAINTAINER Chris Baker <cgbaker@cgbaker.net>
 
-ENV HUGO_VERSION 0.17.0
+ENV HUGO_VERSION 0.17
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
 
 # Install AWS tools as well
